@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from 'emailjs-com';
 
 // Define types for form data and event handlers
 interface FormData {
@@ -14,6 +15,7 @@ function ContactForm() {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Handle input changes with proper typing
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -41,10 +43,21 @@ function ContactForm() {
       return;
     }
 
-    // Form submission logic
-    try {
-      // Simulated API call or form submission
-      console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+
+    // EmailJS configuration
+    const serviceID = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
+    const templateID = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID
+    const userID = 'YOUR_USER_ID'; // Replace with your EmailJS user ID
+
+    // Send email using EmailJS
+    emailjs.send(serviceID, templateID, {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message
+    }, userID)
+    .then((response) => {
+      console.log('Email sent successfully!', response.status, response.text);
       
       // Reset form after successful submission
       setFormData({
@@ -54,9 +67,14 @@ function ContactForm() {
       });
       
       alert('Message sent successfully! We\'ll get back to you soon.');
-    } catch (error) {
+    })
+    .catch((error) => {
+      console.error('Failed to send email:', error);
       alert('Failed to send message. Please try again.');
-    }
+    })
+    .finally(() => {
+      setIsSubmitting(false);
+    });
   };
 
   return (
@@ -151,9 +169,10 @@ function ContactForm() {
                     boxShadow: "0 0 20px rgba(100, 255, 218, 0.3)"
                   }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-[#64FFDA]/10 text-[#64FFDA] py-3 rounded-lg font-semibold border-2 border-[#64FFDA] hover:bg-[#64FFDA]/20 transition-all duration-300 hover:shadow-lg"
+                  className="w-full bg-[#64FFDA]/10 text-[#64FFDA] py-6 rounded-lg font-semibold border-2 border-[#64FFDA] hover:bg-[#64FFDA]/20 transition-all duration-300 hover:shadow-lg"
+                  disabled={isSubmitting}
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </motion.button>
               </motion.div>
             </motion.form>

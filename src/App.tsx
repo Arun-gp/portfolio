@@ -1,10 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { motion, useScroll } from 'framer-motion';
-import { jsPDF } from 'jspdf';
 import { Github, Linkedin, Twitter, Mail, ExternalLink, Code2, Smartphone, Database, Palette, Download } from 'lucide-react';
 import pdf from "./assets/Pdf/ARUN-PANDI-G-P-FlowCV-Resume.pdf"
-
-type RGBColor = [number, number, number];
+import ContactForm from './components/Contact';
 type Project = {
   title: string;
   description: string;
@@ -207,7 +205,7 @@ function App() {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
+              transition={{ delay: 0.16 }}
               className="text-4xl md:text-5xl font-bold mb-6 text-slate-400"
             >
               I'm a <span ref={typedRef} className="text-cyan-400"></span>
@@ -254,9 +252,9 @@ function App() {
             <h2 className="text-4xl font-bold mb-8 text-center text-slate-100">About Me</h2>
             <div className="max-w-3xl mx-auto text-slate-300">
               <p className="text-lg mb-12">
-                With over 5 years of experience in full-stack development, I specialize in building
-                scalable web applications and intuitive user interfaces. My passion lies in creating
-                efficient, maintainable code that solves real-world problems.
+                I’m a passionate and motivated Full-Stack Developer with a strong foundation in web development and software engineering. As an MCA student, I’ve built several academic and personal projects that reflect my skills in HTML, CSS, JavaScript, React, Node.js, and MongoDB. I enjoy turning complex problems into clean, user-friendly solutions and am always eager to learn the latest technologies. I'm now looking for opportunities to grow in a dynamic team and contribute to real-world projects.
+
+
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {skills.map((skill, index) => (
@@ -359,16 +357,13 @@ function App() {
       <section id="contact" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-8 text-slate-100">Get In Touch</h2>
-            <p className="text-slate-300 mb-8">
-              I'm always open to discussing new opportunities and interesting projects.
-              Feel free to reach out if you'd like to collaborate!
-            </p>
+            
+            <ContactForm/>
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="flex justify-center gap-6 mb-12"
+              className="flex justify-center gap-6 mb-12 mt-10"
             >
               {[
                 { icon: <Github className="w-6 h-6" />, href: "https://github.com/Arun-gp" },
@@ -392,7 +387,7 @@ function App() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-slate-400 text-sm"
+              className="text-slate-400 text-xl"
             >
               © {new Date().getFullYear()} Arun Pandi GP. All rights reserved.
             </motion.div>
