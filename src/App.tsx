@@ -3,6 +3,7 @@ import { motion, useScroll } from 'framer-motion';
 import { Github, Linkedin, Twitter, Mail, ExternalLink, Code2, Smartphone, Database, Palette, Download } from 'lucide-react';
 import pdf from "./assets/Pdf/ARUN-PANDI-G-P-FlowCV-Resume.pdf"
 import ContactForm from './components/Contact';
+
 type Project = {
   title: string;
   description: string;
@@ -11,11 +12,13 @@ type Project = {
   github: string;
   demo: string;
 };
+
 type Service = {
   icon: JSX.Element;
   title: string;
   description: string;
 };
+
 type Skill = {
   name: string;
   icon: JSX.Element;
@@ -68,20 +71,16 @@ function App() {
   }, []);
 
   const downloadCV = async () => {
-    // Path to your PDF file in the assets folder
     const pdfUrl = pdf;
-    const fileName = 'ArunPandiResume.pdf'; // Name you want the downloaded file to have
+    const fileName = 'ArunPandiResume.pdf';
     
-    // Create an anchor element
     const anchor = document.createElement('a');
     anchor.href = pdfUrl;
     anchor.download = fileName;
     
-    // Append to the body, trigger click, then remove
     document.body.appendChild(anchor);
     anchor.click();
     document.body.removeChild(anchor);
-
   };
 
   const scrollToSection = (id: string) => {
@@ -156,6 +155,12 @@ function App() {
               AP
             </motion.div>
             <div className="hidden md:flex space-x-8">
+              <button
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="text-slate-300 hover:text-cyan-400 capitalize transition-colors"
+              >
+                Home
+              </button>
               {['about', 'projects', 'services', 'contact'].map((section) => (
                 <button
                   key={section}
@@ -177,7 +182,7 @@ function App() {
       />
 
       {/* Hero Section */}
-      <header className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+      <header id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
         <div className="absolute inset-0 bg-gradient-radial from-cyan-400/10 via-transparent to-transparent" />
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -252,9 +257,7 @@ function App() {
             <h2 className="text-4xl font-bold mb-8 text-center text-slate-100">About Me</h2>
             <div className="max-w-3xl mx-auto text-slate-300">
               <p className="text-lg mb-12">
-                I’m a passionate and motivated Full-Stack Developer with a strong foundation in web development and software engineering. As an MCA student, I’ve built several academic and personal projects that reflect my skills in HTML, CSS, JavaScript, React, Node.js, and MongoDB. I enjoy turning complex problems into clean, user-friendly solutions and am always eager to learn the latest technologies. I'm now looking for opportunities to grow in a dynamic team and contribute to real-world projects.
-
-
+                I'm a passionate and motivated Full-Stack Developer with a strong foundation in web development and software engineering. As an MCA student, I've built several academic and personal projects that reflect my skills in HTML, CSS, JavaScript, React, Node.js, and MongoDB. I enjoy turning complex problems into clean, user-friendly solutions and am always eager to learn the latest technologies. I'm now looking for opportunities to grow in a dynamic team and contribute to real-world projects.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {skills.map((skill, index) => (
@@ -357,7 +360,6 @@ function App() {
       <section id="contact" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            
             <ContactForm/>
             <motion.div
               initial={{ opacity: 0 }}
@@ -398,4 +400,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;   
