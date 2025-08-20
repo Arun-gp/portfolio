@@ -1,4 +1,4 @@
-export const products = [
+/*export const products = [
   {
     id: 1,
     name: "Premium Wireless Headphones",
@@ -31,4 +31,4 @@ export const products = [
     image: "https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=800&auto=format&fit=crop&q=60",
     category: "Home"
   }
-];
+];*/
