@@ -37,9 +37,9 @@ const projects: Project[] = [
     id: 2,
     title: "TaskMaster",
     description:
-      "Mr. Fit Gym – Management System is an admin portal used to manage gym members, track payments, and handle trainer accounts. It helps the gym staff easily ad...",
+      "TaskMaster is a simple yet powerful task management app designed to help you stay organized and productive.",
     longDescription:
-      "A comprehensive gym management system that streamlines operations for fitness centers. Features include member management, payment tracking, trainer scheduling, and detailed analytics dashboard.",
+      "It allows you to create, edit, and track tasks with ease. With features like priority setting, deadlines, and progress tracking, TaskMaster ensures you never miss an important task. Its clean and intuitive interface makes it perfect for students, professionals, and anyone looking to boost productivity.",
     image: "https://res.cloudinary.com/dry3pzan6/image/upload/v1756195876/epjmpbemuuthmtjzi9fz.png",
     technologies: ["React", "Firebase", "Node.js", "Express"],
     demo: "https://taskmastergp.vercel.app/",
