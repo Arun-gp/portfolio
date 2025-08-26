@@ -35,14 +35,14 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Mr. Fit Gym - Management System",
+    title: "TaskMaster",
     description:
       "Mr. Fit Gym – Management System is an admin portal used to manage gym members, track payments, and handle trainer accounts. It helps the gym staff easily ad...",
     longDescription:
       "A comprehensive gym management system that streamlines operations for fitness centers. Features include member management, payment tracking, trainer scheduling, and detailed analytics dashboard.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=200&fit=crop",
+    image: "https://res.cloudinary.com/dry3pzan6/image/upload/v1756195876/epjmpbemuuthmtjzi9fz.png",
     technologies: ["React", "Firebase", "Node.js", "Express"],
-    demo: "https://mrfitgym.com",
+    demo: "https://taskmastergp.vercel.app/",
     github: "https://github.com/example/gym-management",
     year: "2024",
     category: "Web App",
@@ -55,7 +55,8 @@ const projects: Project[] = [
       "Intellig AI – Chat Application is a website where users can log in and chat with an AI using text. It supports text-based chat, AI image generation, and image upload for...",
     longDescription:
       "An advanced AI-powered chat application featuring real-time conversations, image generation capabilities, and seamless user experience. Built with modern technologies for optimal performance.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop",
+    image: 
+          "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop",
     technologies: ["React", "Firebase", "OpenAI API", "Socket.io"],
     demo: "https://intelligai.com",
     github: "https://github.com/example/intellig-ai",
@@ -447,37 +448,42 @@ const ProjectsSection: React.FC = () => {
               ))}
             </div>
           </div>
+        </div>
 
-          {/* Navigation Buttons */}
+        {/* Navigation and Dots Container */}
+        <div className="flex justify-center items-center gap-4 mb-8">
+          {/* Left Arrow */}
           <button
             onClick={prevSlide}
             disabled={currentIndex === 0}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-slate-800/80 border border-slate-600 rounded-full flex items-center justify-center text-white hover:bg-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed backdrop-blur-sm"
+            className="w-10 h-10 bg-slate-800/80 border border-slate-600 rounded-full flex items-center justify-center text-white hover:bg-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed backdrop-blur-sm"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5" />
           </button>
+
+          {/* Dots Indicator */}
+          <div className="flex items-center gap-1.5">
+            {Array.from({ length: maxIndex + 1 }, (_, i: number) => (
+              <button
+                key={i}
+                onClick={() => goToSlide(i)}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  i === currentIndex
+                    ? "bg-cyan-400"
+                    : "bg-slate-600 hover:bg-slate-500"
+                }`}
+              />
+            ))}
+          </div>
+
+          {/* Right Arrow */}
           <button
             onClick={nextSlide}
             disabled={currentIndex === maxIndex}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-slate-800/80 border border-slate-600 rounded-full flex items-center justify-center text-white hover:bg-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed backdrop-blur-sm"
+            className="w-10 h-10 bg-slate-800/80 border border-slate-600 rounded-full flex items-center justify-center text-white hover:bg-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed backdrop-blur-sm"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5" />
           </button>
-        </div>
-
-        {/* Dots Indicator */}
-        <div className="flex justify-center items-center gap-1.5 mb-8">
-          {Array.from({ length: maxIndex + 1 }, (_, i: number) => (
-            <button
-              key={i}
-              onClick={() => goToSlide(i)}
-              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                i === currentIndex
-                  ? "bg-cyan-400"
-                  : "bg-slate-600 hover:bg-slate-500"
-              }`}
-            />
-          ))}
         </div>
 
         {/* Project Counter */}
@@ -640,4 +646,4 @@ const ProjectsSection: React.FC = () => {
   );
 };
 
-export default ProjectsSection;
+export default ProjectsSection; 
