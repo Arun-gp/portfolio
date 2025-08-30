@@ -7,7 +7,7 @@ interface Project {
   title: string;
   description: string;
   longDescription: string;
-  image: string;
+  images: string[];
   technologies: string[];
   demo: string;
   github?: string;
@@ -16,7 +16,7 @@ interface Project {
   isFirebase?: boolean;
 }
 
-// Sample projects data matching your image
+// Sample projects data with images array
 const projects: Project[] = [
   {
     id: 1,
@@ -25,13 +25,17 @@ const projects: Project[] = [
       "The Cloudinary Asset Storage Web App allows users to securely upload, manage, and store digital assets in the cloud.",
     longDescription:
       "It supports images, videos, and files with real-time preview and drag-and-drop uploads.Built on Cloudinary's API, it provides automatic media optimization and fast CDN delivery. Users can easily perform transformations like resizing, cropping, and format conversion via URL. The app ensures scalable, efficient, and user-friendly media management for developers and businesses.",
-    image:
+    images: [
       "https://res.cloudinary.com/dry3pzan6/image/upload/v1755685092/xghkgcma2dwufvrodujo.png",
-    technologies: ["Html", "Tailwind CSS","TypeScript",  "Framer Motion"],
+      "https://res.cloudinary.com/dry3pzan6/image/upload/v1756544984/e8fcx1y0x6bucwchp5fu.png",
+      "https://res.cloudinary.com/dry3pzan6/image/upload/v1756545535/agu7iopkrkpixtiz03nb.png"
+    ],
+    technologies: ["Html", "Tailwind CSS", "TypeScript", "API-GET"],
     demo: "https://imageuploadergp.vercel.app/",
     github: "https://github.com/Arun-gp/image",
     year: "2024",
     category: "Web App",
+    isFirebase: true,
   },
   {
     id: 2,
@@ -40,8 +44,12 @@ const projects: Project[] = [
       "TaskMaster is a simple yet powerful task management app designed to help you stay organized and productive.",
     longDescription:
       "It allows you to create, edit, and track tasks with ease. With features like priority setting, deadlines, and progress tracking, TaskMaster ensures you never miss an important task. Its clean and intuitive interface makes it perfect for students, professionals, and anyone looking to boost productivity.",
-    image: "https://res.cloudinary.com/dry3pzan6/image/upload/v1756195876/epjmpbemuuthmtjzi9fz.png",
-    technologies: ["React", "Firebase", "Node.js", "Express"],
+    images: [
+      "https://res.cloudinary.com/dry3pzan6/image/upload/v1756195876/epjmpbemuuthmtjzi9fz.png",
+      "https://res.cloudinary.com/dry3pzan6/image/upload/v1756195876/bllfg74996nxp0vux5xb.png",
+      "https://res.cloudinary.com/dry3pzan6/image/upload/v1756545870/lvi5mkrlpiu7h6dkvjxn.png"
+    ],
+    technologies: ["HTML", "Tailwind CSS", "TypeScript", "Firebase"],
     demo: "https://taskmastergp.vercel.app/",
     github: "https://github.com/example/gym-management",
     year: "2024",
@@ -49,14 +57,17 @@ const projects: Project[] = [
     isFirebase: true,
   },
   {
-    id: 3,
+     id: 3,
     title: "Intellig AI - Chat Application",
     description:
       "Intellig AI – Chat Application is a website where users can log in and chat with an AI using text. It supports text-based chat, AI image generation, and image upload for...",
     longDescription:
       "An advanced AI-powered chat application featuring real-time conversations, image generation capabilities, and seamless user experience. Built with modern technologies for optimal performance.",
-    image: 
-          "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1516321318423-5310b20a24f5?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1593642532400-2682810df593?w=400&h=200&fit=crop"
+    ],
     technologies: ["React", "Firebase", "OpenAI API", "Socket.io"],
     demo: "https://intelligai.com",
     github: "https://github.com/example/intellig-ai",
@@ -71,7 +82,11 @@ const projects: Project[] = [
       "A modern e-commerce solution with advanced features including real-time inventory management, secure payment processing, and comprehensive analytics dashboard.",
     longDescription:
       "Full-stack e-commerce platform designed for scalability and performance. Features include product catalog management, order processing, payment integration, and customer relationship management.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1516321318423-5310b20a24f5?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1593642532400-2682810df593?w=400&h=200&fit=crop"
+    ],
     technologies: ["Next.js", "PostgreSQL", "Stripe", "Redis"],
     demo: "https://example-store.com",
     github: "https://github.com/example/ecommerce",
@@ -85,7 +100,11 @@ const projects: Project[] = [
       "Collaborative task management platform with real-time updates, team collaboration features, and advanced project tracking capabilities.",
     longDescription:
       "Enterprise-level task management system designed for teams of all sizes. Includes project planning, resource allocation, time tracking, and comprehensive reporting features.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1516321318423-5310b20a24f5?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1593642532400-2682810df593?w=400&h=200&fit=crop"
+    ],
     technologies: ["Vue.js", "MongoDB", "Express", "Socket.io"],
     demo: "https://taskmaster.com",
     github: "https://github.com/example/task-management",
@@ -99,7 +118,11 @@ const projects: Project[] = [
       "Real-time weather data visualization platform with predictive analytics, historical data analysis, and customizable reporting features.",
     longDescription:
       "Advanced weather analytics platform providing comprehensive meteorological insights. Features include real-time data streaming, machine learning predictions, and interactive data visualizations.",
-    image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=200&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1516321318423-5310b20a24f5?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1593642532400-2682810df593?w=400&h=200&fit=crop"
+    ],
     technologies: ["React", "D3.js", "Python", "FastAPI"],
     demo: "https://weather-analytics.com",
     github: "https://github.com/example/weather-dashboard",
@@ -113,7 +136,11 @@ const projects: Project[] = [
       "Comprehensive social media management platform with analytics, scheduling, and engagement tracking features.",
     longDescription:
       "Advanced social media management tool that helps businesses manage multiple social accounts, schedule posts, track engagement metrics, and analyze performance across platforms.",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=200&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1516321318423-5310b20a24f5?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1593642532400-2682810df593?w=400&h=200&fit=crop"
+    ],
     technologies: ["React", "Node.js", "MongoDB", "Chart.js"],
     demo: "https://socialdash.com",
     github: "https://github.com/example/social-dashboard",
@@ -127,7 +154,11 @@ const projects: Project[] = [
       "Modern real estate platform with property listings, virtual tours, and advanced search functionality.",
     longDescription:
       "Full-featured real estate platform offering property search, virtual tours, mortgage calculators, and agent management. Built for scalability and user experience.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=200&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1516321318423-5310b20a24f5?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1593642532400-2682810df593?w=400&h=200&fit=crop"
+    ],
     technologies: ["Next.js", "PostgreSQL", "AWS", "Stripe"],
     demo: "https://realestate.com",
     github: "https://github.com/example/real-estate",
@@ -141,7 +172,11 @@ const projects: Project[] = [
       "Comprehensive LMS with course creation, student tracking, and interactive learning features.",
     longDescription:
       "Enterprise-grade learning management system with course authoring tools, progress tracking, assessments, and collaborative learning features.",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=200&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1516321318423-5310b20a24f5?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1593642532400-2682810df593?w=400&h=200&fit=crop"
+    ],
     technologies: ["React", "Firebase", "WebRTC", "Chart.js"],
     demo: "https://learningms.com",
     github: "https://github.com/example/lms",
@@ -156,7 +191,11 @@ const projects: Project[] = [
       "Mobile-first fitness tracking application with workout plans, nutrition tracking, and progress analytics.",
     longDescription:
       "Comprehensive fitness application featuring workout planning, nutrition tracking, progress visualization, and social features for fitness enthusiasts.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=200&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1516321318423-5310b20a24f5?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1593642532400-2682810df593?w=400&h=200&fit=crop"
+    ],
     technologies: ["React Native", "Firebase", "HealthKit", "Charts"],
     demo: "https://fitnesstrack.com",
     github: "https://github.com/example/fitness-app",
@@ -171,7 +210,11 @@ const projects: Project[] = [
       "Advanced inventory management solution with real-time tracking, automated ordering, and comprehensive reporting.",
     longDescription:
       "Enterprise inventory management system with barcode scanning, automated reordering, supplier management, and detailed analytics dashboard.",
-    image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=200&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1516321318423-5310b20a24f5?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1593642532400-2682810df593?w=400&h=200&fit=crop"
+    ],
     technologies: ["Vue.js", "Laravel", "MySQL", "Redis"],
     demo: "https://inventory.com",
     github: "https://github.com/example/inventory",
@@ -185,7 +228,11 @@ const projects: Project[] = [
       "Collaborative project management platform with Kanban boards, time tracking, and team collaboration features.",
     longDescription:
       "Full-featured project management tool with drag-and-drop task management, time tracking, file sharing, and real-time collaboration capabilities.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&fit=crop",
+      "https://images.unsplash.com/photo-1516321318423-5310b20a24f5?w=400&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1593642532400-2682810df593?w=400&h=200&fit=crop"
+    ],
     technologies: ["React", "Node.js", "PostgreSQL", "Socket.io"],
     demo: "https://projecttool.com",
     github: "https://github.com/example/project-tool",
@@ -256,7 +303,7 @@ const ProjectsSection: React.FC = () => {
 
     const interval = setInterval(() => {
       setModalImageIndex((prev) => {
-        if (prev >= projects.length - 1) {
+        if (prev >= selectedProject.images.length - 1) {
           return 0; // Reset to first image
         }
         return prev + 1;
@@ -276,13 +323,13 @@ const ProjectsSection: React.FC = () => {
   const nextModalImage = (): void => {
     setIsModalCarouselAutoPlaying(false);
     setTimeout(() => setIsModalCarouselAutoPlaying(true), 8000);
-    setModalImageIndex((prev) => (prev + 1) % projects.length);
+    setModalImageIndex((prev) => (prev + 1) % (selectedProject?.images.length || 1));
   };
 
   const prevModalImage = (): void => {
     setIsModalCarouselAutoPlaying(false);
     setTimeout(() => setIsModalCarouselAutoPlaying(true), 8000);
-    setModalImageIndex((prev) => (prev - 1 + projects.length) % projects.length);
+    setModalImageIndex((prev) => (prev - 1 + (selectedProject?.images.length || 1)) % (selectedProject?.images.length || 1));
   };
 
   const goToModalImage = (index: number): void => {
@@ -349,9 +396,7 @@ const ProjectsSection: React.FC = () => {
             <div
               className="flex transition-transform duration-500 ease-out gap-6"
               style={{
-                transform: `translateX(-${
-                  currentIndex * (100 / itemsPerView)
-                }%)`,
+                transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
               }}
               ref={carouselRef}
             >
@@ -371,7 +416,7 @@ const ProjectsSection: React.FC = () => {
                     <div className="relative h-48 bg-gradient-to-br from-slate-700 to-slate-800 overflow-hidden">
                       {!failedImages.has(project.id) ? (
                         <img
-                          src={project.image}
+                          src={project.images[0]}
                           alt={project.title}
                           className="w-full h-full object-cover"
                           onError={() => handleImageError(project.id)}
@@ -408,7 +453,6 @@ const ProjectsSection: React.FC = () => {
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                         {project.title}
                       </h3>
-                      
                       <p className="text-slate-300 text-sm mb-6 leading-relaxed line-clamp-3">
                         {project.description}
                       </p>
@@ -519,7 +563,6 @@ const ProjectsSection: React.FC = () => {
                       </span>
                     </div>
                   </div>
-                  
                   <button
                     onClick={closeModal}
                     className="w-10 h-10 bg-slate-700 hover:bg-slate-600 rounded-full flex items-center justify-center text-slate-300 hover:text-white transition-all duration-300"
@@ -536,8 +579,8 @@ const ProjectsSection: React.FC = () => {
                 >
                   <div className="relative w-full h-full">
                     <img
-                      src={projects[modalImageIndex]?.image}
-                      alt={projects[modalImageIndex]?.title}
+                      src={selectedProject.images[modalImageIndex]}
+                      alt={`${selectedProject.title} - Image ${modalImageIndex + 1}`}
                       className="w-full h-full object-cover transition-opacity duration-500"
                       onError={() => {}}
                     />
@@ -545,8 +588,8 @@ const ProjectsSection: React.FC = () => {
                     {/* Overlay with project info */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                     <div className="absolute bottom-4 left-4 text-white">
-                      <h4 className="font-semibold text-lg">{projects[modalImageIndex]?.title}</h4>
-                      <p className="text-sm text-slate-300">{projects[modalImageIndex]?.category}</p>
+                      <h4 className="font-semibold text-lg">{selectedProject.title}</h4>
+                      <p className="text-sm text-slate-300">{selectedProject.category}</p>
                     </div>
 
                     {/* Navigation buttons */}
@@ -565,13 +608,13 @@ const ProjectsSection: React.FC = () => {
 
                     {/* Image counter */}
                     <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
-                      {modalImageIndex + 1} / {projects.length}
+                      {modalImageIndex + 1} / {selectedProject.images.length}
                     </div>
                   </div>
 
                   {/* Dots indicator for modal carousel */}
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                    {projects.map((_, index) => (
+                    {selectedProject.images.map((_, index) => (
                       <button
                         key={index}
                         onClick={() => goToModalImage(index)}
@@ -646,4 +689,4 @@ const ProjectsSection: React.FC = () => {
   );
 };
 
-export default ProjectsSection; 
+export default ProjectsSection;
