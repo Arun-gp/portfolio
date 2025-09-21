@@ -18,11 +18,11 @@ export const skills: Skill[] = [
     icon: React.createElement(Code2, { className: "w-8 h-8" }), 
     color: "text-blue-500" 
   },
-  // { 
-  //   name: "HTML", 
-  //   icon: React.createElement(Code2, { className: "w-8 h-8" }), 
-  //   color: "text-yellow-500" 
-  // },
+  { 
+    name: "Git&Github(Tool)", 
+    icon: React.createElement(Code2, { className: "w-8 h-8" }), 
+    color: "text-yellow-500" 
+  },
   { 
     name: "Firebase", 
     icon: React.createElement(Database, { className: "w-8 h-8" }), 
