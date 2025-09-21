@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, Smartphone, Database, Palette } from 'lucide-react';
+import { Code2, Smartphone, Database } from 'lucide-react';
 import { Service } from '../types/index';
 
 export const services: Service[] = [
@@ -19,8 +19,8 @@ export const services: Service[] = [
     description: "RESTful and GraphQL API architectures"
   },
   {
-    icon: React.createElement(Palette, { className: "w-8 h-8" }),
-    title: "UI/UX Design",
-    description: "Intuitive and beautiful user interfaces"
+    icon: React.createElement(Code2, { className: "w-8 h-8" }),
+    title: "Vibe Coding",
+    description: "v0.dev,loveable and bolt.new"
   }
 ];

@@ -35,7 +35,7 @@ const projects: Project[] = [
     github: "https://github.com/Arun-gp/image",
     year: "2024",
     category: "Web App",
-    isFirebase: true,
+   
   },
   {
     id: 2,
@@ -58,22 +58,22 @@ const projects: Project[] = [
   },
   {
      id: 3,
-    title: "Intellig AI - Chat Application",
+    title: "Nextriad Solutions",
     description:
-      "Intellig AI – Chat Application is a website where users can log in and chat with an AI using text. It supports text-based chat, AI image generation, and image upload for...",
+      "I co-founded Nextriad Solutions in 2024 along with my friend, with a vision to provide innovative, scalable, and client-focused digital solutions. As a Developer and Co-Founder,",
     longDescription:
-      "An advanced AI-powered chat application featuring real-time conversations, image generation capabilities, and seamless user experience. Built with modern technologies for optimal performance.",
+      " I have been actively involved in designing and delivering projects across e-commerce and business domains.Through this journey, I gained experience not only in software development but also in client communication, project delivery, and startup growth.These projects focused on building responsive e-commerce websites that enhanced online sales, improved customer engagement, and streamlined digital transactions.",
     images: [
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop",
-      "https://images.unsplash.com/photo-1516321318423-5310b20a24f5?w=400&h=200&fit=crop",
-      "https://images.unsplash.com/photo-1593642532400-2682810df593?w=400&h=200&fit=crop"
+      "https://res.cloudinary.com/dry3pzan6/image/upload/v1758444551/flhatmshr3hjhxqootmo.png",
+      "https://res.cloudinary.com/dry3pzan6/image/upload/v1758444549/v80inaqffz0tfcf9m8cv.png",
+      "https://res.cloudinary.com/dry3pzan6/image/upload/v1758444546/sbgzxe9da6rgeylk2hyp.png",
+      "https://res.cloudinary.com/dry3pzan6/image/upload/v1758444558/ivzlnamjdjnzdndioemq.png",
+      "https://res.cloudinary.com/dry3pzan6/image/upload/v1758444552/adf0gnefzq6fudlyiobb.png"
     ],
-    technologies: ["React", "Firebase", "OpenAI API", "Socket.io"],
-    demo: "https://intelligai.com",
-    github: "https://github.com/example/intellig-ai",
+    technologies: ["HTML", "Javascript", "TailWindCSS", "ReactJs"],
+    demo: "https://www.nextriadsolutions.com/",
     year: "2024",
     category: "Web App",
-    isFirebase: true,
   },
   {
     id: 4,

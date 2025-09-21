@@ -10,7 +10,7 @@ const HeroSection = () => {
   useEffect(() => {
     if (!typedRef.current) return;
 
-    const strings = ['Full Stack Developer', 'UI/UX Designer', 'Problem Solver'];
+    const strings = ['Full Stack Developer',  'QA-Automation Tester'];
     let stringIndex = 0;
     let characterIndex = 0;
     let isDeleting = false;

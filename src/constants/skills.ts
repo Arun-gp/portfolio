@@ -9,38 +9,38 @@ export const skills: Skill[] = [
     color: "text-cyan-400" 
   },
   { 
-    name: "Node.js", 
-    icon: React.createElement(Database, { className: "w-8 h-8" }), 
+    name: "Express.js", 
+    icon: React.createElement(Code2, { className: "w-8 h-8" }), 
     color: "text-green-500" 
   },
   { 
-    name: "TypeScript", 
+    name: "CSS", 
     icon: React.createElement(Code2, { className: "w-8 h-8" }), 
     color: "text-blue-500" 
   },
+  // { 
+  //   name: "HTML", 
+  //   icon: React.createElement(Code2, { className: "w-8 h-8" }), 
+  //   color: "text-yellow-500" 
+  // },
   { 
-    name: "Python", 
-    icon: React.createElement(Code2, { className: "w-8 h-8" }), 
-    color: "text-yellow-500" 
-  },
-  { 
-    name: "AWS", 
+    name: "Firebase", 
     icon: React.createElement(Database, { className: "w-8 h-8" }), 
     color: "text-orange-500" 
   },
   { 
-    name: "Docker", 
+    name: "MongoDB", 
     icon: React.createElement(Database, { className: "w-8 h-8" }), 
     color: "text-blue-400" 
   },
   { 
-    name: "GraphQL", 
-    icon: React.createElement(Database, { className: "w-8 h-8" }), 
+    name: "JavaScript", 
+    icon: React.createElement(Code2, { className: "w-8 h-8" }), 
     color: "text-pink-500" 
   },
   { 
-    name: "PostgreSQL", 
-    icon: React.createElement(Database, { className: "w-8 h-8" }), 
+    name: "Tailwind CSS", 
+    icon: React.createElement(Code2, { className: "w-8 h-8" }), 
     color: "text-blue-600" 
   }
 ];
