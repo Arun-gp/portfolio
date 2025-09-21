@@ -92,7 +92,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Phone</h4>
-                  <p className="text-slate-400">+91 12345 67890</p>
+                  <p className="text-slate-400">+91 6380657905</p>
                 </div>
               </div>
 
@@ -102,7 +102,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Location</h4>
-                  <p className="text-slate-400">Avinashi, Tamil Nadu, India</p>
+                  <p className="text-slate-400">Coimbatore, Tamil Nadu, India</p>
                 </div>
               </div>
             </div>
