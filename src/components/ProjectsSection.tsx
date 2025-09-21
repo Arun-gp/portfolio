@@ -77,21 +77,21 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    title: "E-Commerce Platform",
+    title: "Vinayaka Crackers",
     description:
       "A modern e-commerce solution with advanced features including real-time inventory management, secure payment processing, and comprehensive analytics dashboard.",
     longDescription:
       "Full-stack e-commerce platform designed for scalability and performance. Features include product catalog management, order processing, payment integration, and customer relationship management.",
     images: [
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop",
-      "https://images.unsplash.com/photo-1516321318423-5310b20a24f5?w=400&h=200&fit=crop",
-      "https://images.unsplash.com/photo-1593642532400-2682810df593?w=400&h=200&fit=crop"
+      "https://res.cloudinary.com/dry3pzan6/image/upload/v1758454646/t0tykdpnvwzwmgyqabwa.png",
+      "https://res.cloudinary.com/dry3pzan6/image/upload/v1758454644/p2inrjuor8pxmvntcmvy.png",
+      "https://res.cloudinary.com/dry3pzan6/image/upload/v1758454642/lposowtcs8y40d3alb8v.png"
     ],
-    technologies: ["Next.js", "PostgreSQL", "Stripe", "Redis"],
-    demo: "https://example-store.com",
-    github: "https://github.com/example/ecommerce",
-    year: "2023",
+    technologies: ["React", "CSS3", "Firebase","Responsive Design"],
+    demo: "https://www.srivinayakacrackers.com",
+    year: "2025",
     category: "Web App",
+    isFirebase:true
   },
   {
     id: 5,
