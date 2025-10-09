@@ -95,21 +95,23 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    title: "Task Management System",
+    title: "Quiz Exam Application",
     description:
-      "Collaborative task management platform with real-time updates, team collaboration features, and advanced project tracking capabilities.",
+      "Implemented role-based system for Admin, Teacher, Student. Teachers can create quizzes; students can take exams",
     longDescription:
-      "Enterprise-level task management system designed for teams of all sizes. Includes project planning, resource allocation, time tracking, and comprehensive reporting features.",
+      "AI-assisted quiz generation reduces manual work and saves time. Generate multiple-choice questions automatically and Reduce manual work and increase efficiency. Teacher provides Quiz Title and Gemini AI automatically generates:(Questions & Options,Correct Answers)Saves teacher's time & effort,Enables large-scale question generation quickly,Adds variety & creativity to questions",
     images: [
-      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop",
-      "https://images.unsplash.com/photo-1516321318423-5310b20a24f5?w=400&h=200&fit=crop",
-      "https://images.unsplash.com/photo-1593642532400-2682810df593?w=400&h=200&fit=crop"
+      "https://res.cloudinary.com/dry3pzan6/image/upload/v1760000828/m40zwdu3ns59fgujiy2y.png",
+      "https://res.cloudinary.com/dry3pzan6/image/upload/v1760000828/iyzns3rfbixqslxomnoi.png",
+      "https://res.cloudinary.com/dry3pzan6/image/upload/v1760000828/xasssueycfhhxsqlh4vr.png",
+      "https://res.cloudinary.com/dry3pzan6/image/upload/v1760000828/ajepf6wprzjovfwszczw.png"
     ],
     technologies: ["Vue.js", "MongoDB", "Express", "Socket.io"],
-    demo: "https://taskmaster.com",
+    demo: "https://quiztowhiz.vercel.app",
     github: "https://github.com/example/task-management",
     year: "2023",
     category: "Web App",
+    isFirebase:true
   },
   {
     id: 6,
@@ -413,7 +415,7 @@ const ProjectsSection: React.FC = () => {
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10 group">
                     {/* Project Image */}
-                    <div className="relative h-48 bg-gradient-to-br from-slate-700 to-slate-800 overflow-hidden">
+                    <div className="relative h-480 bg-gradient-to-br from-slate-700 to-slate-800 overflow-hidden">
                       {!failedImages.has(project.id) ? (
                         <img
                           src={project.images[0]}
